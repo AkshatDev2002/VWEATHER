@@ -1,0 +1,26 @@
+<!-- Akshat Dev -->
+
+<nav class="navbar">
+  <!-- Navigation bar containing the brand logo -->
+  <a class="navbar-brand" href="#">
+    <!-- Logo for the V-Weather application -->
+    <img src="https://i.postimg.cc/fTJ3NFWp/new-vc-logo.png" alt="V-Weather Logo" class="logo">
+  </a>
+</nav>
+
+<!-- Search component for users to input location -->
+<app-search (search)="fetchWeatherData($event)"></app-search>
+
+<!-- Current weather display component -->
+<app-current-weather [currentWeather]="currentWeather"></app-current-weather>
+
+<!-- Forecast display component for a 3-day weather forecast -->
+<app-forecast [forecast]="forecast"></app-forecast>
+
+<!-- Footer section of the application -->
+<footer class="footer-3d">
+  <div class="footer-content">
+    <!-- Footer content displaying copyright information -->
+    <p>&copy; CREATED BY AKSHAT DEV. All rights reserved.</p>
+  </div>
+</footer>

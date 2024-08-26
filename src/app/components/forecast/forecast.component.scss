@@ -1,0 +1,189 @@
+/* Akshat Dev */
+
+/* Styling for the container of the 3-day weather forecast */
+.weather-card2 {
+  /* Background color and gradient */
+  background-color: #d3d3d3;
+  background-image: linear-gradient(315deg, #d3d3d3 0%,  #FCBF8D 74%);
+  
+  /* Layout and appearance settings */
+  display: block;
+  width: 60%;
+  height: 20%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: larger;
+  margin-left: 550px; /* Adjust as needed for positioning */
+  margin-bottom: 100px;
+  margin-top: -500px; /* Adjust as needed for positioning */
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  z-index: 1000;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+   
+  @media (min-width: 1200px) {
+    width: 60%;
+    margin-left: 550px;
+    margin-top: -500px;
+  }
+
+  @media (max-width: 992px) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 12px;
+    margin-top: -100px;
+  }
+
+  @media (max-width: 576px) {
+    width: 90%;
+    padding: 10px;
+    margin-top: -50px;
+    font-size: medium;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    padding: 8px;
+    font-size: small;
+    margin-top: -20px;
+  }
+
+
+  /* Hover effect: scales up and increases shadow */
+  &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Styling for the section heading */
+  h2 {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      color: #536CB5;
+
+      @media (max-width: 768px) {
+        font-size: 1.3em;
+      }
+  
+      @media (max-width: 576px) {
+        font-size: 1.2em;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 1.1em;
+      }
+  }
+
+  /* Container for forecast items, using flexbox for layout */
+  .forecast-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+
+  /* Styling for each forecast item */
+  .forecast-item {
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+      width: 150px;
+
+      @media (max-width: 768px) {
+        width: 120px;
+        padding: 8px;
+        margin-bottom: 15px;
+      }
+    
+      @media (max-width: 576px) {
+        width: 100px;
+        padding: 6px;
+        margin-bottom: 10px;
+      }
+    
+      @media (max-width: 480px) {
+        width: 90px;
+        padding: 4px;
+        margin-bottom: 8px;
+      }
+
+      /* Styling for the day’s date */
+      h3 {
+          font-size: 1.1em;
+          color: #7688BB;
+          margin-bottom: 10px;
+
+          @media (max-width: 768px) {
+            font-size: 1em;
+          }
+      
+          @media (max-width: 576px) {
+            font-size: 0.9em;
+          }
+      
+          @media (max-width: 480px) {
+            font-size: 0.8em;
+          }
+      }
+
+      /* Styling for the weather icon */
+      img {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 10px;
+
+          @media (max-width: 576px) {
+            width: 30px;
+            height: 30px;
+          }
+      }
+
+      /* Styling for temperature display */
+      .temp {
+          font-size: 1.5em;
+          font-weight: bold;
+
+          @media (max-width: 768px) {
+            font-size: 1.3em;
+          }
+      
+          @media (max-width: 576px) {
+            font-size: 1.2em;
+          }
+      
+          @media (max-width: 480px) {
+            font-size: 1em;
+          }
+      }
+
+      /* Styling for weather condition description */
+      .condition {
+          font-size: 1em;
+          margin-top: 5px;
+          color: #707070;
+
+          @media (max-width: 768px) {
+            font-size: 0.9em;
+          }
+      
+          @media (max-width: 576px) {
+            font-size: 0.85em;
+          }
+      
+          @media (max-width: 480px) {
+            font-size: 0.8em;
+          }
+      }
+  }
+}

@@ -1,0 +1,18 @@
+<!-- Akshat Dev -->
+
+<!-- Container for search functionality -->
+<div class="content-container">
+  
+  <!-- Prompt for users to get the latest weather updates -->
+  <p class="p">"Get the Latest Weather Updates"</p>
+  
+  <!-- Material form field for inputting city or ZIP code -->
+  <mat-form-field appearance="fill" class="search-bar">
+    <mat-label>Enter city or ZIP code</mat-label>
+    <!-- Input field for the location, triggers search on Enter key -->
+    <input matInput (keyup.enter)="onSearch(locationInput.value)" #locationInput>
+  </mat-form-field>
+  
+  <!-- Button to initiate search, triggers the onSearch method -->
+  <button mat-raised-button color="primary" (click)="onSearch(locationInput.value)" class="button">Search</button>
+</div>

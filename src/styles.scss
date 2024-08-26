@@ -1,0 +1,90 @@
+// Akshat Dev
+
+body, html {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://i.postimg.cc/KcsRkKSH/BG1.png');  // Path to your image
+  background-size: cover;
+  position: relative;    
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    background-size: contain;
+  }
+
+  @media (max-width: 576px) {
+    background-size: 100% 100%;
+  }
+}
+
+/* Rainfall Canvas */
+#rainfall-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220%;
+  pointer-events: none;  // Ensures clicks go through to the background
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0)), 
+              url('https://i.postimg.cc/BZkBc3XQ/SL-042221-42420-07.jpg'); // Transparent PNG with rain drops
+  
+  opacity: 0.080;  // Adjust transparency of the rain
+  animation: rainfall 2s linear infinite;  // Add rainfall animation
+
+  @media (max-width: 768px) {
+    height: 180%;
+  }
+
+  @media (max-width: 576px) {
+    height: 150%;
+  }
+}
+
+@keyframes rainfall {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100vh; }
+}
+
+/* Content Container */
+.content-container {
+  position: relative;
+  z-index: 3; /* Above the background and rainfall effect */
+  padding: 20px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 10px;
+  }
+}
+
+.footer-3d {
+  position: absolute;
+  background: linear-gradient(
+    90deg, 
+    #e9e9e9, 
+    #d4d4d4, 
+    #9a9a9a, 
+    #707070, 
+    #454545
+  );
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;  
+  
+  @media (max-width: 768px) {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}

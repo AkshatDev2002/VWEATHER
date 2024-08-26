@@ -1,0 +1,37 @@
+<!-- Akshat Dev -->
+
+<!-- Container for displaying the 3-day weather forecast -->
+<div class="weather-card2" *ngIf="forecast">
+  
+  <!-- Title for the 3-day forecast section -->
+  <h2>3-Day Forecast</h2>
+  
+  <!-- Container for individual forecast items -->
+  <div class="forecast-container">
+    
+    <!-- Loop through the forecast days and display weather information for each day -->
+    <div class="forecast-item" *ngFor="let day of forecast.forecast.forecastday">
+      
+      <!-- Display the date for the forecast day -->
+      <h3>{{ day.date }}</h3>
+      
+      <!-- Weather icon for the forecast day -->
+      <img [src]="day.day.condition.icon" alt="Weather icon">
+      
+      <!-- Maximum temperature for the forecast day -->
+      <p>High: {{ day.day.maxtemp_c }}°C</p>
+      
+      <!-- Minimum temperature for the forecast day -->
+      <p>Low: {{ day.day.mintemp_c }}°C</p>
+      
+      <!-- Text description of the weather condition for the forecast day -->
+      <p>{{ day.day.condition.text }}</p>
+      
+      <!-- Average temperature for the forecast day -->
+      <div class="temp">{{ day.day.avgtemp_c }}°C</div>
+      
+      <!-- Repeated text description of the weather condition -->
+      <div class="condition">{{ day.day.condition.text }}</div>
+    </div>
+  </div>
+</div>

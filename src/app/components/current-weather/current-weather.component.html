@@ -1,0 +1,43 @@
+<!-- Akshat Dev -->
+
+<!-- Weather Card Container: Displays current weather details if 'currentWeather' data is available -->
+<div class="weather-card" *ngIf="currentWeather">
+  
+  <!-- Title for the current weather section -->
+  <h1>Current Weather</h1>
+  
+  <!-- Location name displayed at the top of the weather card -->
+  <h2>{{ currentWeather.location.name }}</h2>
+
+  <!-- Container for weather information such as temperature and condition -->
+  <div class="weather-info">
+    
+    <!-- Weather icon sourced from the API, displays the condition icon -->
+    <img [src]="currentWeather.current.condition.icon" alt="Weather icon">
+    
+    <!-- Current temperature in Celsius -->
+    <div class="temp">{{ currentWeather.current.temp_c }}°C</div>
+    
+    <!-- Text description of the current weather condition -->
+    <div class="condition">{{ currentWeather.current.condition.text }}</div>
+    
+    <!-- Maximum temperature forecasted for the day -->
+    <p>High: {{ currentWeather.current.maxtemp_c }}°C</p>
+    
+    <!-- Minimum temperature forecasted for the day -->
+    <p>Low: {{ currentWeather.current.mintemp_c }}°C</p>
+    
+    <!-- Repeats the current weather condition text -->
+    <p>{{ currentWeather.current.condition.text }}</p>
+  </div>
+  
+  <!-- Container for additional weather details -->
+  <div class="details">
+    
+    <!-- Humidity percentage -->
+    <div>Humidity: {{ currentWeather.current.humidity }}%</div>
+    
+    <!-- Wind speed in kilometers per hour -->
+    <div>Wind: {{ currentWeather.current.wind_kph }} kph</div>
+  </div>
+</div>
