@@ -2,6 +2,9 @@ V-Weather
 
 V-Weather is a weather dashboard application built with Angular. It provides current weather conditions and a 3-day weather forecast. The application includes features such as a search bar for entering a city or ZIP code and displays weather information using the WeatherAPI.
 
+## Project Demo
+https://github.com/user-attachments/assets/2084c070-c688-45b5-98cf-83da90eb25f0
+
 ## Table of Contents
 
 - [Installation](#installation)
